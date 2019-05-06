@@ -1,0 +1,31 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+	 	Sign In
+{% endblock title %}
+
+
+
+{% block content %}
+
+
+<div class="jumbotron jumbotron-primary mt-5">
+	<div class="container">
+		<form method="POST">
+		  	{% csrf_token %}
+		  	<fieldset class="form-group">
+				<legend class="border-bottom mb-4">Sign In</legend>
+					{{ form | crispy }}
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-success" type="submit">Login</button>
+					<small class="text-muted ml-2">
+						<a href="#">Forgot Password</a>
+					</small>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock content %}

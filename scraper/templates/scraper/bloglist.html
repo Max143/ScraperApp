@@ -1,0 +1,76 @@
+{% extends  'users/base.html' %}
+
+
+
+
+
+{% block title %}
+		Get More Blogs
+{% endblock title %}
+
+
+{% block content %}
+	
+
+	<div class="card text-center">
+		  <div class="card-header">
+		    Featured
+		  </div>
+		  <div class="card-body">
+		    <h5 class="card-title">Special title treatment</h5>
+		    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+		    <a href="{% url 'engine' %}" class="btn btn-primary">Get New Blogs</a>
+		  </div>
+		</div>
+
+        
+       <!-- Problem is how i can increment the value of index or are there any method to accomplish it?-->
+		
+       <div class="container mt-4">
+	     <div class="card text-center">
+			  <div class="card-header">
+			    {{ data_set.2.0 }}
+			  </div>
+			  <div class="card-body">
+			    <h5 class="card-title">{{ data_set.0.0 }}</h5>
+
+			    <p class="card-text">{{ data_set.1.0 }}</p>
+			 
+			    <a href="{{ data_set.3.0 }}" class="btn btn-primary">Read Now</a>
+			  </div>
+		 </div>
+	  </div>
+
+	   <div class="container mt-4">
+	     <div class="card text-center">
+			  <div class="card-header">
+			    {{ data_set.2.1 }}
+			  </div>
+			  <div class="card-body">
+			    <h5 class="card-title">{{ data_set.0.1 }}</h5>
+
+			    <p class="card-text">{{ data_set.1.1 }}</p>
+			 
+			    <a href="{{ data_set.3.1 }}" class="btn btn-primary">Read Now</a>
+			  </div>
+		 </div>
+	  </div>
+
+	  <div class="container mt-4">
+	     <div class="card text-center">
+			  <div class="card-header">
+			    {{ data_set.2.1 }}
+			  </div>
+			  <div class="card-body">
+			    <h5 class="card-title">{{ data_set.0.2 }}</h5>
+
+			    <p class="card-text">{{ data_set.1.2 }}</p>
+			 
+			    <a href="{{ data_set.3.1 }}" class="btn btn-primary">Read Now</a>
+			  </div>
+		 </div>
+	  </div>
+
+
+
+{% endblock content %}
